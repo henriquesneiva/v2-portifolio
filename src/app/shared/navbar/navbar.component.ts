@@ -77,10 +77,10 @@ export class NavbarComponent implements OnInit {
         }
     }
 
-    onclickScroller(id: string): void {
-        this.viewportScroller.scrollToAnchor(id);
+    
+    onclickScroller($element): void {
+        const element = document.querySelector(`#${$element}`)
+        if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' })
     }
-
-
 
 }
