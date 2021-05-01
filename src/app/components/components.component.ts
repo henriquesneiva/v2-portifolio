@@ -1,6 +1,9 @@
+
 import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+
+import  * as $ from "jquery";
 
 @Component({
     selector: 'app-components',
@@ -13,7 +16,7 @@ import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class ComponentsComponent implements OnInit {
-
+    @ViewChild('selectElem') el:ElementRef;
     page = 4;
     page1 = 5;
     focus;
@@ -42,7 +45,35 @@ export class ComponentsComponent implements OnInit {
                 input_group[i].classList.remove('input-group-focus');
             });
         }
-    }
 
+        $(document).ready(function() {
+            $('#btn-envio').click(function() {
+        
+                $.ajax({
+                    type: "POST",
+                    url: "https://api.staticforms.xyz/submit",
+                    data: {
+                        'name': $('#nome').val(),
+                        'email': $('#email').val(),
+                        'message': $('#mensagem').val(),
+                        'honeypot': $('#honeypot').val(),
+                        'accessKey': $('#accessKey').val(),
+        
+                    },
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.success == true) {
+                            alert('Email enviado!');
+                            
+                        } else {
+                            alert('ocorreu um erro ')
+                            
+                        }
+                    }
+                });
+        
+            });
+        });
+    }
 
 }

@@ -90,30 +90,30 @@
                 <div class="row">
                     <div class="col-md-6 text-center" routerLinkActive="active">
                         <a [routerLink]="['/landing']">
-                            <img src="./assets/img/examples/landing-page.JPG" alt="Rounded Image"
+                            <img src="./assets/img/examples/bookstory.png" alt="Rounded Image"
                                 class="img-rounded img-responsive" style="width: 100%">
                             <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
                         </a>
                     </div>
                     <div class="col-md-6 text-center" routerLinkActive="active">
-                        <a [routerLink]="['/landing']">
-                            <img src="./assets/img/examples/landing-page.JPG" alt="Rounded Image"
+                        <a [routerLink]="['/user-profile']">
+                            <img src="./assets/img/examples/clientes.png" alt="Rounded Image"
                                 class="img-rounded img-responsive" style="width: 100%">
-                            <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
+                            <a [routerLink]="['/user-profile']" class="btn btn-outline-neutral btn-round">Landing Page</a>
                         </a>
                     </div>
                     <div class="col-md-6 text-center" routerLinkActive="active">
-                        <a [routerLink]="['/landing']">
-                            <img src="./assets/img/examples/landing-page.JPG" alt="Rounded Image"
+                        <a [routerLink]="['/cstruck']">
+                            <img src="./assets/img/examples/cstrcuk.png" alt="Rounded Image"
                                 class="img-rounded img-responsive" style="width: 100%">
-                            <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
+                            <a [routerLink]="['/cstruck']" class="btn btn-outline-neutral btn-round">Landing Page</a>
                         </a>
                     </div>
                     <div class="col-md-6 text-center" routerLinkActive="active">
-                        <a [routerLink]="['/landing']">
-                            <img src="./assets/img/examples/landing-page.JPG" alt="Rounded Image"
+                        <a [routerLink]="['/estoque']">
+                            <img src="./assets/img/examples/estoque.png" alt="Rounded Image"
                                 class="img-rounded img-responsive" style="width: 100%">
-                            <a [routerLink]="['/landing']" class="btn btn-outline-neutral btn-round">Landing Page</a>
+                            <a [routerLink]="['/estoque']" class="btn btn-outline-neutral btn-round">Landing Page</a>
                         </a>
                     </div>
                 </div>
@@ -187,12 +187,14 @@
                             <h3 class="title">Contato</h3>
 
                             <form class="register-form">
+                                <input type="hidden" name="accessKey" value="227ef1d3-feb7-4c6d-8fd2-709055f82e3d" id="accessKey">
+                                <input type="text" name="honeypot" id="honeypot" style="display:none">
                                 <label>nome</label>
                                 <div class="input-group form-group-no-border"
                                     [ngClass]="{'input-group-focus':focus===true}">
 
 
-                                    <input type="text" class="form-control" placeholder="Nome" (focus)="focus=true"
+                                    <input type="text" id="nome" name="name" class="form-control" placeholder="Nome" (focus)="focus=true"
                                         (blur)="focus=false">
                                 </div>
 
@@ -201,16 +203,17 @@
                                     [ngClass]="{'input-group-focus':focus1===true}">
 
 
-                                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true"
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="Email" (focus)="focus1=true"
                                         (blur)="focus1=false">
                                 </div>
                                 <label>Menssagem</label>
                                 <div class="input-group form-group-no-border"
                                     [ngClass]="{'input-group-focus':focus1===true}">
-                                    <input type="text" class="form-control" placeholder="Menssagem"
+                                    <input type="text" id="mensagem" name="message" class="form-control" placeholder="Menssagem"
                                         (focus)="focus1=true" (blur)="focus1=false">
                                 </div>
-                                <button class="btn btn-danger btn-block btn-round">Register</button>
+                                <button type="button" class="btn btn-danger btn-block btn-round" id="btn-envio">Enviar</button>
+                                
                             </form>
                         </div>
 
@@ -220,3 +223,4 @@
         </div>
     </div>
 </div>
+

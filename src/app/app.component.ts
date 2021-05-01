@@ -6,6 +6,8 @@ import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
+declare var $: any;
+
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
@@ -48,6 +50,7 @@ export class AppComponent implements OnInit {
             body.classList.add('ie-background');
 
         }
+
 
     }
     removeFooter() {

@@ -26,7 +26,7 @@
               "src/assets/css/demo.css",
               "src/assets/css/nucleo-icons.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/jquery/dist/jquery.min.js"]
           },
           "configurations": {
             "production": {
