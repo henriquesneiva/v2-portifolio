@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SignupComponent } from './signup/signup.component';
 import { CstruckComponent } from './cstruck/cstruck.component';
 import { EstoqueComponent } from './estoque/estoque.component';
 
@@ -17,7 +16,6 @@ import { EstoqueComponent } from './estoque/estoque.component';
     ],
     declarations: [
         LandingComponent,
-        SignupComponent,
         ProfileComponent,
         CstruckComponent,
         EstoqueComponent
